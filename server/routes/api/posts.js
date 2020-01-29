@@ -29,13 +29,13 @@ router.delete('/:id', async (req, res) => {
 //  returns reference to posts collection
 async function loadPostsCollection() {
   const client = await mongodb.MongoClient.connect(
-    'mongodb://sagar57:sagarkomal123!@ds339177.mlab.com:39177/vue_express',
+    'mongodb://USERNAME:PASSWORD@ds339177.mlab.com:39177/DATABASENAME',
     {
       useNewUrlParser: true
     }
   );
 
-  return client.db('vue_express').collection('posts');
+  return client.db('DATABASENAME').collection('posts');
 }
 
 module.exports = router;
